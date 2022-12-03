@@ -13,3 +13,12 @@ body {
     border-width: 5px;
     border-color: green;
 }
+
+#key-press-display-box {
+    position: absolute;
+    font-size: 33px;
+    float: right;
+    padding: 10px;
+   border: solid; bottom: 20px; right: 20px;
+    color: green;
+}

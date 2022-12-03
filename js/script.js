@@ -102,11 +102,21 @@ function moveTouch(e) {
 
 
 function update (event){
+    updateKeyDisplay(event.key)
     if(isSnakeOffScreen()) return;
     if(event.key === "h" && direction !== "right") direction = "left";
     if(event.key === "k" && direction !== "down") direction = "up";
     if(event.key === "l" && direction !== "left") direction = "right";
     if(event.key === "j" && direction !== "up") direction = "down";
+}
+
+function updateKeyDisplay(key){
+    const displayElement= document.getElementById("key-press-display-box")
+    if (!['h','j','k','l'].includes(key)){
+        displayElement.innerHTML = '<span style="color:red;" >'+key+'</span>'
+        return
+    }
+    displayElement.innerText = key
 }
 
 function isSnakeOffScreen() {
