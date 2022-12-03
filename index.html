@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <title>Vim Snake</title>
+</head>
+<body>
+    <h1>Vim Snake</h1>
+    <p>Master the vim h,j,k,l movement</p>
+    <p>up = k | down = j | right = l | left = h</p>
+    <h3>Score: <span id="score">0</span></h3>
+    speed: <input id="speed" min="30" max="230" type="range" step="10" value="130" onchange="applySpeed()">
+    <canvas id="snake" width="512" height="512"></canvas>
+</body>
+</html>
